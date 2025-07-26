@@ -59,3 +59,43 @@
 - JSX dosyası içerisinde hem javascript hemde html kodlaması yapılabildiğini söylemiştik.Javascript içerisinde yer alan değişken,fonksiyon,obje gibi yapıların tanımlanması ise bileşen içerisinde return satırının dışında yapılır.
 
 - React uygulamasında arayüzde gösterilecek elemanların render edilebilmesi için App.jsx dosyası içerisinde çağırılması gerekir.Bu çağırma işleminin yapıla bilmesi içinse ilk olarak bu bileşen export edilmeli App.jsx içerisinde ise import edilmelidir.İmport edilip kullanılacak component bir self-closing etiket şeklinde çağırılmalıdır.
+
+# Bir React Bileşenini Stillendirmesi
+
+- Bir react bileşeneni
+
+1. İnline Stillendirme: Bir bileşeni satır içerisinde stillendirme yöntemidir.Bu yöntemde stil verilecek elemanın içerisinde style={{}} yazılır ve içerideki {} içerisinde gerekli stillendirme yapılır.Html'deki inline stillendirmeden farklı olarak react bileşeni içerisinde stil özellikleri eğer birden fazla kelimeden oluşuyorsa bunu camelCase'e uygun şekilde stillendiririz.Still özelliğine karşılık px cinsinden değer girilecekse bunun için px kullanmadan direkt birim yazılır.
+
+2. External Stillendirme: Bir bileşeni css uzantılı dosyalarda stillendirme işlemidir.Bunun için bir css uzantılı dosya oluşturulur.Bu dosyada gerekli stillendirme işlemleri yapılır.Yapılan bu stillendirmenin elemanlara etki etmesi için bileşen içerisinde css dosyası import edilmelidir.
+
+3. Harici Stillendirme Kütüphaneleri İle Stillendirme: Bir react bileşenin stillendirmesini stillendirme kütüphaneleri ile yapma işlemidir.Bu kurs kapsamında bootstrap kullanımını öğreneceğiz.
+
+# Bir React Projesine Nasıl Paket Kurulur?
+
+- Bir react projesine paket indirmek için `npm install [paketAdı]` komutu kullanılır.Buradaki paket adı kısmında belirtilen paket react projesine indirilecektir.
+
+- Paketler ile ilgili işlemleri yaparken uygulamayı ayağa kaldırdığımız terminal'in haricinde bir terminal kullanmamız gerekir.
+
+- Bir react kütüphanesinin sürümleri olacaktır.Bu sürümler arasında özellik bakımından farklılıklar bulunur.Bir kütüphaneyi projemize indirirken sürüm belirtmezsek en son sürüm indirilir.Ama illa spesifik bir sürüm indirmek istersek yukarıda yazılı olan paket indirme komutunun sonuna indirilmek istenen sürüm yazılır.`npm install [paketAdı@sürümNo]`
+
+# Bir Paket Sürümünü Güncelleme
+
+- React'da bir paket sürümünü güncellemek için `npm install [paketAdı@paketSürümü]` komutu kullanılır.
+
+# React'ın Temel Konuları
+
+- Bir react projesi oluştururken bilinmesi gereken temel konular şunlardır:
+
+- component: React component temelli bir mimariye sahiptir.Bir component oluşturma kısmına yukarıda bakmıştık.
+
+- props: Props react componentleri arasında veri aktarımı sağlar.Bir component'e props geçerek onu dinamik hale getirebiliriz.Bir component'de props kullanabilmek için ilk olarak çağırıldığı yerde o component'e props geçmemiz akabinde ise component içerisinde o propsu yakalamamız gerekir.
+
+- Çoklu Renderlama:React bileşenlerinin bir noktada birden fazla kez render edilmesine çoklu renderlama denir.Çoklu renderlama için javascript dizileri ve map metodunu kullanırız.
+
+- JSX Dosyası İçerisinde Dinamik İşlemler: Jsx dosyası içerisinde hem html hemde js kodu yazabildiğimizi söylemiştik.Bileşen içerisinde html kodunu return satırı içinde yazarız.Javascript'deki dinamik değer tanımlama işlemlerini ise return satırının dışında bileşen içerisinde yaparız.Eğer bileşen içerisindeki bir elemana olay izleyicisi ekleyeceksek bunu ilgili olayı verilmek istenen elemana doğrudan yazarak ekleriz.
+
+- useState
+
+- Koşullu Renderlama:
+
+- useEffect

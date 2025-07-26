@@ -1,9 +1,19 @@
+// Css dosyasını import et
+import header from "./header.css";
+
 // Bir React bileşeni oluştur
 function Header() {
   return (
-    <div>
-      <h1>Header'dan selamlar</h1>
-    </div>
+    <header>
+      <h1>Logo</h1>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Basket</a>
+      </nav>
+    </header>
   );
 }
 
